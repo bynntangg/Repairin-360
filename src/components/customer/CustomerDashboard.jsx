@@ -54,9 +54,9 @@ export default function CustomerDashboard({ setActiveTab, onSelectCategory }) {
               <span>Smart Repair & Circular Service Ecosystem</span>
             </div>
 
-            <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight">
+            <h1 className="font-heading font-extrabold text-[2rem] sm:text-4xl lg:text-5xl tracking-tight leading-tight">
   Barang Rusak? <br />
-  <span className="inline-block mt-2 sm:mt-3 px-3 py-1.5 sm:px-4 sm:py-2 text-2xl sm:text-4xl lg:text-5xl rounded-lg sm:rounded-xl bg-emerald-300 text-[#105C45] shadow-lg shadow-emerald-900/20 border border-emerald-200/50 break-words">
+  <span className="inline-block mt-2 px-3.5 py-1.5 text-xl sm:text-4xl lg:text-5xl sm:px-5 sm:py-2.5 rounded-lg sm:rounded-xl bg-emerald-300 text-[#105C45] shadow-lg shadow-emerald-900/20 border border-emerald-200/50 whitespace-nowrap">
     Jangan Langsung Ganti!
   </span>
 </h1>
