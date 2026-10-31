@@ -48,13 +48,11 @@ export default function Navbar({ activeTab, setActiveTab }) {
     return null;
   };
 
-  // Fungsi untuk menangani klik menu di mobile
   const handleMobileNav = (tab) => {
     setActiveTab(tab);
     setShowMobileMenu(false);
   };
 
-  // Array Menu Dinamis berdasarkan Role
   const getCustomerMenus = () => [
     { id: 'dashboard', label: '🏠 Beranda' },
     { id: 'smartcheck', label: '🔍 SmartCheck (Diagnosis)' },
@@ -142,7 +140,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
               <button
                 onClick={() => {
                   setShowNotifDropdown(!showNotifDropdown);
-                  setShowUserDropdown(false); // Tutup profil jika buka notif
+                  setShowUserDropdown(false);
                 }}
                 className="relative p-2 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors cursor-pointer"
                 title="Notifikasi"
@@ -153,14 +151,17 @@ export default function Navbar({ activeTab, setActiveTab }) {
                 )}
               </button>
 
-              {/* Notification Dropdown (Responsive) */}
+              {/* ================= NOTIFIKASI DROPDOWN (TANPA OVERLAY GELAP) ================= */}
               {showNotifDropdown && (
-                <div className="absolute right-0 mt-2 w-[calc(100vw-2rem)] sm:w-80 md:w-96 bg-white rounded-2xl shadow-xl border border-gray-100 py-3 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div 
+                  className="fixed sm:absolute top-20 sm:top-full left-1/2 sm:left-auto -translate-x-1/2 sm:translate-x-0 sm:right-0 w-[90vw] sm:w-80 md:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 py-3 z-50
+                  origin-top sm:origin-top-right transform transition-all duration-200 ease-out scale-100 opacity-100"
+                >
                   <div className="px-4 pb-2 border-b border-gray-100 flex items-center justify-between">
                     <h3 className="font-heading font-semibold text-sm text-gray-900">Notifikasi Terkini</h3>
                     <span className="text-xs text-gray-500">{notifications.length} pemberitahuan</span>
                   </div>
-                  <div className="max-h-80 overflow-y-auto divide-y divide-gray-50 px-2 py-1">
+                  <div className="max-h-[60vh] sm:max-h-80 overflow-y-auto divide-y divide-gray-50 px-2 py-1">
                     {notifications.length === 0 ? (
                       <p className="text-center text-xs text-gray-500 py-4">Belum ada notifikasi.</p>
                     ) : (
@@ -231,7 +232,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
 
               {/* User Dropdown Menu */}
               {showUserDropdown && (
-                <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="px-4 py-2 border-b border-gray-100">
                     <p className="text-xs font-bold text-gray-900">{currentUser?.name}</p>
                     <p className="text-[11px] text-gray-500 truncate">{currentUser?.email}</p>
@@ -298,11 +299,10 @@ export default function Navbar({ activeTab, setActiveTab }) {
 
       {/* ================= MOBILE NAVIGATION BAR (Dropdown) ================= */}
       {showMobileMenu && (
-        <div className="lg:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-200 shadow-2xl z-50 animate-in slide-in-from-top-2">
+        <div className="lg:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-200 shadow-2xl z-50 animate-in slide-in-from-top-2 duration-200">
           <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
             <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2 px-2">Menu Navigasi</p>
             
-            {/* Render Menu berdasarkan role */}
             {currentMenus.map((menu) => (
               <button
                 key={menu.id}
@@ -315,7 +315,6 @@ export default function Navbar({ activeTab, setActiveTab }) {
               </button>
             ))}
 
-            {/* Menu Tambahan Khusus Mobile (Poin & Reset) */}
             <div className="border-t border-gray-100 mt-2 pt-2 space-y-1">
               {currentRole === 'customer' && (
                 <button

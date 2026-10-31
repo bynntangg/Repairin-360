@@ -55,10 +55,11 @@ export default function CustomerDashboard({ setActiveTab, onSelectCategory }) {
             </div>
 
             <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight">
-              Barang Rusak? <br />
-              <span className="text-emerald-300 underline decoration-emerald-400 decoration-wavy">Jangan Langsung Ganti!</span>
-            </h1>
-
+  Barang Rusak? <br />
+  <span className="inline-block mt-2 sm:mt-3 px-3 py-1.5 sm:px-4 sm:py-2 text-2xl sm:text-4xl lg:text-5xl rounded-lg sm:rounded-xl bg-emerald-300 text-[#105C45] shadow-lg shadow-emerald-900/20 border border-emerald-200/50 break-words">
+    Jangan Langsung Ganti!
+  </span>
+</h1>
             <p className="text-emerald-100/90 text-xs sm:text-sm leading-relaxed max-w-xl">
               Halo, <strong>{currentUser?.name || 'Pelanggan'}</strong>! Dapatkan analisis awal kerusakan perangkat seketika dengan <strong>SmartCheck</strong>, temukan teknisi panggilan tersertifikasi melalui <strong>SmartMatch</strong>, dan nikmati garansi resmi digital dengan <strong>Repair Passport</strong>.
             </p>
