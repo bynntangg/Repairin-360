@@ -29,11 +29,11 @@ export function AppProvider({ children }) {
       try {
         return JSON.parse(saved);
       } catch (e) {
-        return SEED_USERS[0];
+        return null; 
       }
     }
-    // Default to Customer (Budi Santoso) so app is immediately usable, but can be logged out anytime
-    return SEED_USERS[0];
+    // UBAH MENJADI NULL: Agar landing page tampil pertama kali
+    return null; 
   });
 
   const [currentRole, setCurrentRole] = useState(() => {
@@ -679,7 +679,7 @@ export function AppProvider({ children }) {
     localStorage.removeItem(`${STORAGE_KEY}_smartcheck`);
 
     setUsers(SEED_USERS);
-    setCurrentUser(SEED_USERS[0]);
+    setCurrentUser(null); // Ubah ke null agar kembali ke landing page
     setCurrentRole('customer');
     setActiveTechnicianId('tech-2');
     setTechnicians(INITIAL_TECHNICIANS);
