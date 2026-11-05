@@ -92,26 +92,30 @@ export default function Navbar({ activeTab, setActiveTab }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
-          {/* Logo & Brand */}
-          <div 
-            className="flex items-center gap-2 sm:gap-3 cursor-pointer" 
-            onClick={() => setActiveTab(currentRole === 'customer' ? 'dashboard' : currentRole === 'technician' ? 'tech-dashboard' : 'admin-dashboard')}
-          >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#167D5A] to-[#105C45] flex items-center justify-center text-white shadow-md shadow-[#167D5A]/20">
-              <div className="relative">
-                <Wrench className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                <Leaf className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-300 absolute -bottom-1 -right-1" />
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-heading font-extrabold text-lg sm:text-xl text-[#105C45] tracking-tight">REPAIRIN</span>
-                <span className="font-heading font-black text-lg sm:text-xl text-[#167D5A]">360</span>
-                <span className="text-[10px] bg-[#E5F3EC] text-[#167D5A] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider hidden sm:block">Official</span>
-              </div>
-              <p className="text-[11px] text-gray-500 hidden sm:block -mt-0.5">Smart Repair & Circular Service Ecosystem</p>
-            </div>
-          </div>
+        {/* Logo & Brand */}
+<div 
+  className="flex items-center gap-2 sm:gap-3 cursor-pointer select-none" 
+  onClick={() => setActiveTab(currentRole === 'customer' ? 'dashboard' : currentRole === 'technician' ? 'tech-dashboard' : 'admin-dashboard')}
+>
+  {/* Kotak Hijau Transparan untuk Logo */}
+  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#167D5A]/10 border border-[#167D5A]/20 shrink-0 flex items-center justify-center p-1.5">
+    <img 
+      src="/images/Logo Repairin.png" 
+      alt="Repairin 360 Logo" 
+      className="w-full h-full object-contain scale-110 sm:scale-125" 
+    />
+  </div>
+
+  {/* Teks Brand */}
+  <div>
+    <div className="flex items-center gap-1.5">
+      <span className="font-heading font-extrabold text-lg sm:text-xl text-[#105C45] tracking-tight">REPAIRIN</span>
+      <span className="font-heading font-black text-lg sm:text-xl text-[#167D5A]">360</span>
+      <span className="text-[10px] bg-[#E5F3EC] text-[#167D5A] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider hidden sm:block">Official</span>
+    </div>
+    <p className="text-[11px] text-gray-500 hidden sm:block -mt-0.5">Smart Repair & Circular Service Ecosystem</p>
+  </div>
+</div>
 
           {/* Right Action Elements */}
           <div className="flex items-center gap-2 sm:gap-3">

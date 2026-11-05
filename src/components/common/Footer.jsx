@@ -7,21 +7,32 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-emerald-800/60">
           {/* Brand Info */}
-          <div className="md:col-span-2 space-y-3">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
-                <Wrench className="w-4 h-4 text-emerald-300" />
-              </div>
-              <span className="font-heading font-black text-xl tracking-tight text-white">REPAIRIN 360</span>
-            </div>
-            <p className="text-emerald-100/80 text-xs sm:text-sm leading-relaxed max-w-md">
-              Platform layanan reparasi pintar dan ekosistem sirkular pertama di Indonesia yang menghubungkan pelanggan dengan teknisi servis panggilan terverifikasi. Transparan, terpercaya, dan bergaransi resmi digital.
-            </p>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/10 inline-flex items-center gap-2 text-xs text-emerald-200">
-              <Leaf className="w-4 h-4 text-emerald-300 shrink-0" />
-              <span className="font-semibold italic">"Repair It. Extend Its Life. Reduce Waste."</span>
-            </div>
-          </div>
+<div className="md:col-span-2 space-y-3">
+  <div className="flex items-center gap-3"> {/* Gap ditambah jadi gap-3 agar tidak terlalu rapat */}
+    
+    {/* Kotak Putih Transparan - Ukuran diperbesar */}
+    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white/10 flex items-center justify-center overflow-hidden p-1.5 shrink-0">
+      <img 
+        src="/images/Logo Repairin.png" 
+        alt="Repairin 360 Logo" 
+      />
+    </div>
+    
+    {/* Teks diperbesar dari text-xl menjadi text-2xl */}
+    <span className="font-heading font-black text-2xl tracking-tight text-white">
+      REPAIRIN 360
+    </span>
+  </div>
+  
+  <p className="text-emerald-100/80 text-xs sm:text-sm leading-relaxed max-w-md">
+    Platform layanan reparasi pintar dan ekosistem sirkular pertama di Indonesia yang menghubungkan pelanggan dengan teknisi servis panggilan terverifikasi. Transparan, terpercaya, dan bergaransi resmi digital.
+  </p>
+  
+  <div className="p-3 rounded-xl bg-white/5 border border-white/10 inline-flex items-center gap-2 text-xs text-emerald-200">
+    <Leaf className="w-4 h-4 text-emerald-300 shrink-0" />
+    <span className="font-semibold italic">"Repair It. Extend Its Life. Reduce Waste."</span>
+  </div>
+</div>
 
           {/* 6 Core Features */}
           <div>

@@ -67,28 +67,33 @@ export default function AuthView() {
         <div className="lg:col-span-5 bg-gradient-to-br from-[#105C45] via-[#167D5A] to-[#1e8a64] text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-white/5 pointer-events-none blur-2xl"></div>
 
-          {/* Logo */}
-          <div className="space-y-4 relative z-10">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-white text-[#105C45] flex items-center justify-center shadow-lg">
-                <div className="relative">
-                  <Wrench className="w-6 h-6 text-[#167D5A]" />
-                  <Leaf className="w-4 h-4 text-emerald-500 absolute -bottom-1 -right-1" />
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center gap-1.5">
-                  <span className="font-heading font-black text-2xl text-white tracking-tight">REPAIRIN</span>
-                  <span className="font-heading font-black text-2xl text-emerald-300">360</span>
-                </div>
-                <span className="text-[10px] text-emerald-200 uppercase tracking-widest font-semibold block">Circular Ecosystem</span>
-              </div>
-            </div>
+         {/* Logo */}
+<div className="space-y-4 relative z-10">
+  <div className="flex items-center gap-3">
+    
+    {/* Kotak Transparan (Glassmorphism) */}
+    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg overflow-hidden shrink-0 p-2">
+      <img 
+        src="/images/Logo Repairin.png" 
+        alt="Repairin 360 Logo" 
+      />
+    </div>
+    
+    {/* Teks Brand */}
+    <div>
+      <div className="flex items-center gap-1.5">
+        <span className="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight">REPAIRIN</span>
+        <span className="font-heading font-black text-2xl sm:text-3xl text-emerald-300">360</span>
+      </div>
+      <span className="text-[10px] sm:text-xs text-emerald-200 uppercase tracking-widest font-semibold block mt-0.5">Circular Ecosystem</span>
+    </div>
 
-            <p className="text-xs sm:text-sm text-emerald-100/90 leading-relaxed pt-2">
-              Platform layanan reparasi pintar dan ekosistem sirkular pertama di Indonesia. Memperbaiki barang, memperpanjang usia pakai, dan mengurangi timbulan limbah elektronik.
-            </p>
-          </div>
+  </div>
+
+  <p className="text-xs sm:text-sm text-emerald-100/90 leading-relaxed pt-2">
+    Platform layanan reparasi pintar dan ekosistem sirkular pertama di Indonesia. Memperbaiki barang, memperpanjang usia pakai, dan mengurangi timbulan limbah elektronik.
+  </p>
+</div>
 
           {/* Illustration Visual Preview */}
           <div className="my-8 relative z-10">
